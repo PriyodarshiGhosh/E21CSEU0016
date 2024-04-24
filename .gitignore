@@ -1,0 +1,5 @@
+# Ignore node_modules directory in question1
+Question1/node_modules
+
+# Ignore node_modules directory in question2
+Question2/node_modules
