@@ -7,6 +7,6 @@ app.use(express.json())
 app.use("/",registerouter)
 app.use("/",loginrouter)
 mongoose.connect("mongodb+srv://aryan12:priyo1818@cluster0.5krm9bs.mongodb.net/")
-app.listen(3001,()=>{
+app.listen(3000,()=>{
     console.log("listening at 3001")
 })

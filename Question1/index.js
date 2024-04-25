@@ -1,12 +1,8 @@
 import express from "express";
-import mongoose from "mongoose";
-import { registerouter } from "../controller/register.js";
-import { loginrouter } from "../controller/login.js";
+import { getNumbers } from "./controller/averageController.js";
 const app=express();
-app.use(express.json())
-app.use("/",registerouter)
-app.use("/",loginrouter)
-mongoose.connect("mongodb+srv://aryan12:priyo1818@cluster0.5krm9bs.mongodb.net/")
-app.listen(3001,()=>{
-    console.log("listening at 3001")
+app.use(express.json());
+app.get('/numbers/:numberid', getNumbers);
+app.listen(9876,()=>{
+    console.log("listening at 9876")
 })
